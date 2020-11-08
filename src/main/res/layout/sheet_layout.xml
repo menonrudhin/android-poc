@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="sheetModel"
+            type="com.example.mybill.SheetModel"></variable>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{sheetModel.inputModel.txtPrice}"
+            />
+        <EditText
+            android:id="@+id/txtDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{sheetModel.inputModel.txtDiscount}"
+            />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{sheetModel.inputModel.txtAmount}"/>
+    <TextView
+        android:id="@+id/txtYouSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{sheetModel.txtYouSave}"
+        />
+    <EditText
+        android:id="@+id/txtTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@={sheetModel.txtTax}"
+        />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{sheetModel.txtTotal}"/>
+    </LinearLayout>
+</layout>
